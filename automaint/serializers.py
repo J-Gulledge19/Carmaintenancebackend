@@ -8,7 +8,7 @@ class MaintSerializer(serializers.ModelSerializer):
         fields = '__all__'
         
 class CarSerializer(serializers.ModelSerializer):
-    maintenance = MaintSerializer(many = True)
+    maintenance = MaintSerializer(many = True, read_only=True)
     class Meta:
         model = Car
         fields = '__all__'
